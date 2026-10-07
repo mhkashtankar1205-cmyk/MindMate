@@ -1,0 +1,103 @@
+import { PersonalityQuestion, SituationQuestion } from '../types/assessment';
+
+export const mockPersonalityQuestions: PersonalityQuestion[] = [
+  { id: 1, question: 'I often worry about things that haven\'t happened yet.', dimension: 'Emotional Reactivity', category: 'Mindset' },
+  { id: 2, question: 'I find it easy to stay organized when I have many academic tasks.', dimension: 'Conscientiousness', category: 'Study' },
+  { id: 3, question: 'I feel comfortable discussing my academic concerns with people I trust.', dimension: 'Extraversion', category: 'Social' },
+  { id: 4, question: 'I enjoy trying new study techniques or relaxation routines.', dimension: 'Openness', category: 'Growth' },
+  { id: 5, question: 'I prefer having a clear step-by-step plan before starting an important project.', dimension: 'Conscientiousness', category: 'Study' },
+  { id: 6, question: 'I tend to react strongly when unexpected exam results or grade changes occur.', dimension: 'Emotional Reactivity', category: 'Mindset' },
+  { id: 7, question: 'I like collaborating with classmates on group projects and assignments.', dimension: 'Agreeableness', category: 'Social' },
+  { id: 8, question: 'I feel recharged after spending quiet time alone working on my goals.', dimension: 'Extraversion', category: 'Mindset' },
+  { id: 9, question: 'I am curious about learning subjects outside my regular college syllabus.', dimension: 'Openness', category: 'Growth' },
+  { id: 10, question: 'I try my best to keep my promises to study partners and project teammates.', dimension: 'Agreeableness', category: 'Social' },
+  { id: 11, question: 'I get overwhelmed when multiple assignment deadlines align in the same week.', dimension: 'Emotional Reactivity', category: 'Study' },
+  { id: 12, question: 'I consistently set aside focused time for daily study without procrastinating.', dimension: 'Conscientiousness', category: 'Study' },
+  { id: 13, question: 'I readily share helpful notes and study materials with my friends.', dimension: 'Agreeableness', category: 'Social' },
+  { id: 14, question: 'I reflect deeply on feedback given by professors or mentors.', dimension: 'Openness', category: 'Growth' },
+  { id: 15, question: 'I find it hard to disconnect from college thoughts even during breaks.', dimension: 'Emotional Reactivity', category: 'Mindset' },
+  { id: 16, question: 'I take initiative in organizing study groups or student events.', dimension: 'Extraversion', category: 'Social' },
+  { id: 17, question: 'I keep my daily routine predictable and well-structured.', dimension: 'Conscientiousness', category: 'Lifestyle' },
+  { id: 18, question: 'I am open to exploring non-traditional career paths or new skills.', dimension: 'Openness', category: 'Career' },
+  { id: 19, question: 'I feel comfortable asking professors or seniors for academic assistance.', dimension: 'Extraversion', category: 'Social' },
+  { id: 20, question: 'I remain patient and calm when group members make mistakes.', dimension: 'Agreeableness', category: 'Social' },
+];
+
+export const mockSituationQuestions: SituationQuestion[] = [
+  {
+    id: 'sit_1',
+    category: 'Academic',
+    scenario: 'You have a major semester exam in 3 days and half of your syllabus is still incomplete.',
+    question: 'What would you most likely do in this situation?',
+    options: [
+      { label: 'Break the syllabus down into priority topics and start working immediately.', stressWeight: 1 },
+      { label: 'Feel stressed and anxious, but push through and study late.', stressWeight: 2 },
+      { label: 'Keep worrying about failing without actually starting to study.', stressWeight: 4 },
+      { label: 'Avoid thinking about the exam and distract yourself with screen time.', stressWeight: 5 },
+      { label: 'Reach out to a classmate or senior to ask for condensed notes and guidance.', stressWeight: 2 },
+    ],
+  },
+  {
+    id: 'sit_2',
+    category: 'Career',
+    scenario: 'Your classmates are securing campus placements or internships while you haven\'t received an offer yet.',
+    question: 'How do you typically react to this career pressure?',
+    options: [
+      { label: 'Review your resume, update your skills, and keep applying calmly.', stressWeight: 1 },
+      { label: 'Compare yourself to others and feel intense self-doubt.', stressWeight: 4 },
+      { label: 'Feel overwhelmed and temporarily isolate yourself from peers.', stressWeight: 5 },
+      { label: 'Talk with a career mentor or professor to get constructive advice.', stressWeight: 2 },
+      { label: 'Try to ignore the placement news and focus purely on coursework.', stressWeight: 3 },
+    ],
+  },
+  {
+    id: 'sit_3',
+    category: 'Social',
+    scenario: 'Your close college friend group made weekend outing plans without inviting or informing you.',
+    question: 'What is your immediate emotional response?',
+    options: [
+      { label: 'Assume it was an oversight and gently message one of them.', stressWeight: 1 },
+      { label: 'Feel hurt and wonder if you did something wrong to upset them.', stressWeight: 3 },
+      { label: 'Feel deeply rejected and pull away from the friend group.', stressWeight: 4 },
+      { label: 'Use the time to focus on your personal hobbies or self-care.', stressWeight: 1 },
+      { label: 'Feel angry and post subtle status updates expressing your frustration.', stressWeight: 4 },
+    ],
+  },
+  {
+    id: 'sit_4',
+    category: 'Family',
+    scenario: 'You have a high-stakes exam tomorrow, but there is family tension and noise at home.',
+    question: 'How do you handle this environment?',
+    options: [
+      { label: 'Head to the college library or a quiet study area nearby.', stressWeight: 1 },
+      { label: 'Put on noise-cancelling headphones and focus as best as possible.', stressWeight: 2 },
+      { label: 'Get drawn into the conflict and lose your concentration.', stressWeight: 5 },
+      { label: 'Politely inform your family that you need quiet hours for your exam.', stressWeight: 2 },
+      { label: 'Give up on studying for the evening out of frustration.', stressWeight: 5 },
+    ],
+  },
+  {
+    id: 'sit_5',
+    category: 'Financial',
+    scenario: 'You are worried about upcoming tuition fees, project expenses, or monthly college budget constraints.',
+    question: 'How do you cope with financial stress?',
+    options: [
+      { label: 'Create a strict budget plan and explore scholarship/part-time options.', stressWeight: 1 },
+      { label: 'Feel constant low-grade anxiety about money throughout the day.', stressWeight: 4 },
+      { label: 'Avoid looking at your bank account or expense tracker.', stressWeight: 5 },
+      { label: 'Discuss the situation transparently with your parents or counselor.', stressWeight: 2 },
+    ],
+  },
+  {
+    id: 'sit_6',
+    category: 'Relationship',
+    scenario: 'You had a major disagreement with your partner or best friend right before an important submission.',
+    question: 'How do you navigate this distraction?',
+    options: [
+      { label: 'Agree to pause the argument until after your submission is turned in.', stressWeight: 1 },
+      { label: 'Try to work, but keep replaying the argument in your head.', stressWeight: 4 },
+      { label: 'Stop working on the submission to resolve the conflict immediately.', stressWeight: 3 },
+      { label: 'Shut down emotionally and miss the submission deadline.', stressWeight: 5 },
+    ],
+  },
+];
